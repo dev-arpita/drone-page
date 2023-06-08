@@ -88,7 +88,6 @@ header {
 
 .menu-btn,
 .exit-btn {
-    /* height: 1rem; */
     width: 2rem;
 }
 
@@ -178,11 +177,99 @@ blockquote p {
     margin-right: 0.688rem;
     padding-bottom:0.5rem ;
 }
+
+.game-footage {
+    height: 100%;
+    padding: 53px 0 39px;
+}
 .col-content h2 {
     font-size: 36px;
     line-height: 91.6%;
 }
 .col-content p{
     line-height: 141.6%;
-    font-size: 18px
+    font-size: 1.125rem;
+    margin-right: 2.188rem;
+}
+.col-img-gallery {
+    display: grid;
+    grid-template-areas: 
+        ". img-1 img-2"
+        "img-3 img-4 ."
+        ". img-5 ."
+    ;
+}
+.img-container {
+    width: 7.313rem;
+}
+.gallery {
+    height: 100%;
+}
+.img-01 {
+    grid-area: img-5;
+}
+.img-02 {
+    grid-area: img-2;
+}
+.img-03 {
+    grid-area: img-4;
+}
+.img-04 {
+    grid-area: img-1;
+}
+.img-05 {
+    grid-area: img-3;
+}
+footer .container {
+    padding: 0 1.813rem 3.313rem 0;
+    background: #B2DD9E;
+}
+footer h2 {
+    background: #9FC88C;
+    padding: 1.813rem 1.563rem 1.5rem 0 ;
+    font-size: 2.25rem;
+    margin: 0;
+}
+footer h2,
+footer a {
+    text-align: center;
+}
+form {
+    padding: 1.813rem 2.688rem 0 3.938rem;
+}
+.contact-details {
+    padding-left: 3.938rem;
+}
+.contact-details p {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+.border {
+    height: 0px;
+    width: 172px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.063rem;
+}
+input,
+label,
+button {
+    display: block;
+    width: 100%;
+}
+button {
+    background: #000;
+    color: white;
+    font-size: 1.8rem;
+    padding: 1.313rem 3.938rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin: 3.5rem 0;
+}
+label {
+    font-size: 1.5rem;
+    margin-top: 1.875rem;
+    margin-bottom: 1.125rem;
+}
+input{
+    padding: 1rem;
 }
