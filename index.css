@@ -64,7 +64,6 @@ header {
     justify-content: space-between;
     z-index: 2;
     width: 100%;
-    /* background: transparent; */
 }
 
 .logo {
@@ -88,7 +87,6 @@ header {
 
 .menu-btn,
 .exit-btn {
-    /* height: 1rem; */
     width: 2rem;
 }
 
@@ -98,7 +96,13 @@ header {
     right: 20%;
 }
 nav {
+    position: absolute;
     display: none;
+    height: 100vh;
+    right: 60px;
+}
+.open-nav {
+    display: block;
 }
 .menu-list {
     display: flex;
