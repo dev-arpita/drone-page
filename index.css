@@ -163,6 +163,7 @@ nav {
 
 .testimonial {
     background: url("avi-waxman-xlO5WWQDcQQ-unsplash.jpg"), #303853;
+    /* background: url("assets/stadium.jpg"), lightgray 50% / cover no-repeat, #303853; */
     height: 37.188rem;
     padding: 3.813rem 0 3.813rem 2.563rem ;
 }
@@ -281,8 +282,9 @@ button {
     font-size: 1.8rem;
     padding: 1.313rem 3.938rem;
     text-transform: uppercase;
-    letter-spacing: -2px;
+    letter-spacing: 1px;
     margin: 3.5rem 0;
+    font-family: inherit;
 }
 label {
     font-size: 1.5rem;
@@ -296,9 +298,7 @@ input{
     .container {
         min-width: 1440px;
     }
-    /* .left-col {
-        display: flex;
-    } */
+
     .gallery {
         max-width:17.563rem;
         max-height: 17.563rem;
@@ -375,7 +375,6 @@ input{
         display: flex;
         align-items: center;
         padding-left: 10rem;
-        position: relative;
     }
     .testimonial blockquote {
         width: 100%;
@@ -385,6 +384,8 @@ input{
     }
     .game-footage {
         display: flex;
+        padding-bottom: 8.91rem;
+        position: relative;
     }
     .col-content h2 {
         font-size: 5.553rem;
@@ -393,18 +394,49 @@ input{
         width: 35%;
         padding-left: 4rem;
     }
+        .col-content p {
+            font-size: 1.5rem;
+        }
     .col-img-gallery {
         position: absolute;
-            bottom: -35px;
+            bottom: 170px;
             right: 0;
+
     }
-    .flex {
-        display: flex;
+    footer h2 {
+        font-size: 4rem;
+        width: 50%;
+        text-align: start;
+        padding-left: 7rem;
+    }
+    .footer-flex form {
+        padding-left: 7rem;
+    }
+    .footer-flex {
+        display: grid;
+        grid-template-columns: 60% 40%;
     }
     form {
         padding-top: 0;
     }
     .contact-details {
-        padding-top: 5rem;
+        padding-top: 5.5rem;
+    }
+    label {
+        font-size: 2rem;
+    }
+    input {
+        height: 4.563rem;
+    }
+    .contact-details p {
+        font-size: 1.375rem;
+        margin-bottom: 0.94rem;
+        line-height: 91.6%;
+    }
+    .border {
+        width: 24.688rem;
+    }
+    .border:first-of-type {
+        margin-bottom: 0.5rem;
     }
 }
