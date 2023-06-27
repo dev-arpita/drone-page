@@ -107,14 +107,14 @@ nav {
     width: 17.875rem;
     padding: 2.875rem 2.5rem;
 }
- .menu-list ul {
-     display: flex;
-     flex-direction: column;
-     align-items: end;
-     padding-top: 2.5rem;
-     padding-left: 0;
-     gap: 0.625rem;
- }
+.menu-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-top: 2.5rem;
+    padding-left: 0;
+    gap: 0.625rem;
+}
 
 .hero {
     display: grid;
@@ -133,6 +133,9 @@ nav {
 }
 .left-col {
     background: url("sanjeevan-satheeskumar-iZp4h1gXiEQ-unsplash.jpg"), #B2DD9E;
+    background-repeat: no-repeat, repeat;
+        /* background-image: url("img_tree.gif"), url("paper.gif"); */
+        background-blend-mode: lighten;
     background-blend-mode: screen, normal;
 }
 .left-col p {
@@ -165,6 +168,7 @@ nav {
 }
 .testimonial p {
     font-size: 1.5rem;
+    font-family: "Bebas Neue";
 }
 .testimonial .author {
     margin-top: 2.438rem;
@@ -296,12 +300,12 @@ input{
         display: flex;
     } */
     .gallery {
-        min-width:17.563rem;
-        min-height: 17.563rem;
+        max-width:17.563rem;
+        max-height: 17.563rem;
     }
     .hero,
     .testimonial {
-        padding-left: calc(15rem - 3.75rem);
+        margin-left: calc(15rem - 3.75rem);
     }
     .hero {
         display: grid;
@@ -366,5 +370,41 @@ input{
         top: 200px;
         width: 30.25rem;
         height:22.625rem;
+    }
+    .testimonial {
+        display: flex;
+        align-items: center;
+        padding-left: 10rem;
+        position: relative;
+    }
+    .testimonial blockquote {
+        width: 100%;
+    }
+    .testimonial p:first-child{
+        font-size: 3.375rem;
+    }
+    .game-footage {
+        display: flex;
+    }
+    .col-content h2 {
+        font-size: 5.553rem;
+    }
+    .col-content {
+        width: 35%;
+        padding-left: 4rem;
+    }
+    .col-img-gallery {
+        position: absolute;
+            bottom: -35px;
+            right: 0;
+    }
+    .flex {
+        display: flex;
+    }
+    form {
+        padding-top: 0;
+    }
+    .contact-details {
+        padding-top: 5rem;
     }
 }
