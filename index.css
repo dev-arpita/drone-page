@@ -117,8 +117,6 @@ nav {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 80% auto;
     height: 100vh;
     text-align: center;
 }
@@ -127,17 +125,40 @@ nav {
     font-size: 3.063rem;
     line-height: 91.6%;
     padding: 8.25rem 2.063rem 1.75rem 2.375rem;
+    opacity: 1;
+    color: #000;
 }
 .hero p {
     margin-top: 0;
 }
-.left-col {
-    background: url("sanjeevan-satheeskumar-iZp4h1gXiEQ-unsplash.jpg"), #B2DD9E;
-    background-repeat: no-repeat, repeat;
-        /* background-image: url("img_tree.gif"), url("paper.gif"); */
-        background-blend-mode: lighten;
-    background-blend-mode: screen, normal;
+.flex-warp {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
 }
+.left-col {
+    background: url("/assets/streaks.jpg");
+    background-size: cover;
+    background-position-x: center;
+    height: 100%;
+    position: relative;
+}
+.left-col-cover {
+    background: #B2DD9E;
+    height: 100%;
+    width: 100%;
+    opacity: .8;
+    position: absolute;
+}
+/* .left-col-content {
+    position: absolute;
+        top: 0;
+}
+.hero-img {
+    position: absolute;
+        bottom: 0;
+} */
 .left-col p {
     padding: 1.75rem 1.438rem;
 }
@@ -151,6 +172,7 @@ nav {
     opacity: 0.5;
 }
 .main-img {
+    opacity: 1;
     position: absolute;
     z-index: 1;
     left: 4px;
@@ -189,7 +211,10 @@ blockquote p {
     margin-right: 0.688rem;
     padding-bottom:0.5rem ;
 }
-
+.author {
+    display: inline-flex;
+    align-items: center;
+}
 .game-footage {
     height: 100%;
     padding: 53px 0 39px;
@@ -222,11 +247,9 @@ blockquote p {
 }
 .img-01 {
     grid-area: img-5;
-
 }
 .img-02 {
     grid-area: img-2;
-
 }
 .img-03 {
     grid-area: img-4;
@@ -309,7 +332,14 @@ input{
     }
     .hero {
         display: grid;
-        grid-template-columns: 60% auto;
+        grid-template-columns: 60% 0 auto;
+    }
+    .left-col-cover {
+        height: 100%;
+        width: 100%;
+    }
+    .flex-warp {
+        position: unset;
     }
     .menu-btn,
     .exit-btn {
@@ -337,10 +367,9 @@ input{
         align-items: center;
         position: unset;
         padding: 0;
-
+        margin-right: 7rem;
     }
     .menu-list a {
-        /* color: #363B4E; */
         font-size: 1.5rem;
     }
     .logo {
