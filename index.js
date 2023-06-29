@@ -1,12 +1,13 @@
 // javascript
 const getEl = (element) => document.querySelector(element)
-const menuBtn = getEl(".menu-btn");
-const nav = getEl("nav")
-const exitBtn = getEl(".exit-btn")
+ menuBtn = getEl(".menu-btn")
+ navMenu = getEl(".menu-list")
+ exitBtn = getEl(".exit-btn");
 menuBtn.addEventListener("click", ()=> {
-    nav.classList.add("open-nav");
-
+    // navMenu.classList.add("open-nav");
+    navMenu.style.transform = 'translateX(0%)'
 })
 exitBtn.addEventListener("click", ()=> {
-    nav.classList.remove("open-nav");
+    // navMenu.classList.remove("open-nav");
+    navMenu.style.transform = 'translateX(100%)'
 })

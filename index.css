@@ -88,19 +88,23 @@ header {
     right: 20%;
 }
 
-nav {
+/* nav {
     position: absolute;
-    display: none;
     right: 60px;
-    height: 100vh;
-    background: #363B4E;
+
+} */
+.menu-list {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
 }
 
 .open-nav {
-    display: block;
+    transform: translateX(0);
 }
 
 .menu-list {
+    height: 100vh;
+    background: #363B4E;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -117,6 +121,8 @@ nav {
 }
 
 .hero {
+    display: grid;
+    grid-template-columns: 80% auto;
     height: 100vh;
     text-align: center;
 }
@@ -136,6 +142,8 @@ nav {
     flex-direction: column;
     position: absolute;
     top: 0;
+    left: 86px;
+    width: 60%;
 }
 .left-col {
     background: url("/assets/streaks.jpg");
@@ -151,14 +159,7 @@ nav {
     opacity: .8;
     position: absolute;
 }
-/* .left-col-content {
-    position: absolute;
-        top: 0;
-}
-.hero-img {
-    position: absolute;
-        bottom: 0;
-} */
+
 .left-col p {
     padding: 1.75rem 1.438rem;
 }
@@ -183,20 +184,27 @@ nav {
     background: #7988BE;
 }
 
-.testimonial {
-    background: url("avi-waxman-xlO5WWQDcQQ-unsplash.jpg"), #303853;
-    /* background: url("assets/stadium.jpg"), lightgray 50% / cover no-repeat, #303853; */
+.quote {
+    background: url("/assets/stadium.jpg");
     height: 37.188rem;
-    padding: 3.813rem 0 3.813rem 2.563rem ;
+
 }
-.testimonial p {
+.quote p {
     font-size: 1.5rem;
     font-family: "Bebas Neue";
 }
-.testimonial .author {
+.quote .author {
     margin-top: 2.438rem;
     font-size: 1.125rem;
     font-family: 'Bebas Neue';
+}
+blockquote {
+    background: #303853;
+    height: 100%;
+    width: 100%;
+    padding: 3.813rem 0 3.813rem 2.563rem;
+    margin: 0;
+    opacity: 0.8;
 }
 blockquote p {
     line-height: 99.6%;
@@ -261,23 +269,23 @@ blockquote p {
     grid-area: img-3;
 }
 
-/* FOOTER */
+/* CONTACT US */
 
-footer .container {
+.contact .container {
     padding: 0 1.813rem 3.313rem 0;
     background: #B2DD9E;
 }
-footer h2 {
+.contact h2 {
     background: #9FC88C;
     padding: 1.813rem 1.563rem 1.5rem 0 ;
     font-size: 2.25rem;
     margin: 0;
 }
-footer h2,
-footer a {
+.contact h2,
+.contact a {
     text-align: center;
 }
-form {
+.form-el {
     padding: 1.813rem 2.688rem 0 3.938rem;
 }
 .contact-details {
@@ -286,6 +294,9 @@ form {
 .contact-details p {
     margin-top: 0;
     margin-bottom: 0.75rem;
+}
+.contact-details p a {
+    color: inherit;
 }
 .border {
     height: 0px;
@@ -316,6 +327,8 @@ label {
 }
 input{
     padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
 }
 @media screen and (min-width: 900px) {
     .container {
@@ -327,7 +340,7 @@ input{
         max-height: 17.563rem;
     }
     .hero,
-    .testimonial {
+    .quote {
         margin-left: calc(15rem - 3.75rem);
     }
     .hero {
@@ -348,7 +361,7 @@ input{
     nav {
         position: unset;
         height: fit-content;
-        display: block;
+        transform: translateX(0);
         background: red;
     }
     header {
@@ -400,15 +413,15 @@ input{
         width: 30.25rem;
         height:22.625rem;
     }
-    .testimonial {
+    .quote {
         display: flex;
         align-items: center;
+    }
+    blockquote {
         padding-left: 10rem;
+
     }
-    .testimonial blockquote {
-        width: 100%;
-    }
-    .testimonial p:first-child{
+    .quote p:first-child{
         font-size: 3.375rem;
     }
     .game-footage {
@@ -432,21 +445,24 @@ input{
             right: 0;
 
     }
-    footer h2 {
+    .contact h2 {
         font-size: 4rem;
         width: 50%;
         text-align: start;
         padding-left: 7rem;
     }
-    .footer-flex form {
+    .form-el {
         padding-left: 7rem;
     }
-    .footer-flex {
+    .form-flex {
         display: grid;
         grid-template-columns: 60% 40%;
     }
-    form {
+    .form-el {
         padding-top: 0;
+    }
+    .form-el button {
+        border: 0;
     }
     .contact-details {
         padding-top: 5.5rem;
@@ -462,6 +478,7 @@ input{
         margin-bottom: 0.94rem;
         line-height: 91.6%;
     }
+
     .border {
         width: 24.688rem;
     }
