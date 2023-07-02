@@ -91,13 +91,23 @@ header {
 nav {
     position: fixed;
         right: 0;
-        left: 52px;
+        left: 103px;
+        bottom: 0;
     transform: translatex(100%);
     transition: transform 0.3s ease-in-out;
+
 }
 
 .open-nav {
-    transform: translateX(41%);
+    transform: translateX(0%);
+}
+@media screen and (min-width: 600px) {
+    nav {
+        left: 52px;
+    }
+    .open-nav {
+            transform: translateX(41%);
+        }
 }
 
 .menu-list {
