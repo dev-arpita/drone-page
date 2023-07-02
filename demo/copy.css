@@ -20,23 +20,30 @@ p {
     text-transform: none;
     line-height: 141.6%;
 }
+
 ul {
     list-style-type: none;
 }
+
 li {
     font-size: 1.563rem;
 }
+
 img {
     width: 100%;
 }
+
 a {
     color: white;
     text-decoration: none;
 }
+
 h1 {
     margin-bottom: 0;
 }
-a, button,
+
+a,
+button,
 .menu-btn,
 .exit-btn {
     cursor: pointer;
@@ -67,6 +74,7 @@ header {
     color: white;
     padding: 0.625rem 0.75rem;
 }
+
 .logo h2 {
     margin: 0;
     font-size: 1.625rem;
@@ -89,26 +97,25 @@ header {
 }
 
 nav {
-    position: fixed;
-        right: 0;
-        left: 52px;
-    transform: translatex(100%);
-    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    display: none;
+    right: 60px;
+    height: 100vh;
+    background: #363B4E;
 }
 
 .open-nav {
-    transform: translateX(41%);
+    display: block;
 }
 
 .menu-list {
-    height: 100vh;
-    background: #363B4E;
     display: flex;
     flex-direction: column;
     align-items: end;
     width: 17.875rem;
     padding: 2.875rem 2.5rem;
 }
+
 .menu-list ul {
     display: flex;
     flex-direction: column;
@@ -129,33 +136,18 @@ nav {
     font-size: 3.063rem;
     line-height: 91.6%;
     padding: 8.25rem 2.063rem 1.75rem 2.375rem;
-    opacity: 1;
-    color: #000;
 }
+
 .hero p {
     margin-top: 0;
 }
-.flex-warp {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 86px;
-    width: 60%;
-}
+
 .left-col {
-    background: url("/assets/streaks.jpg");
-    background-size: cover;
-    background-position-x: center;
-    height: 100%;
-    position: relative;
-}
-.left-col-cover {
-    background: #B2DD9E;
-    height: 100%;
-    width: 100%;
-    opacity: .8;
-    position: absolute;
+    background: url("sanjeevan-satheeskumar-iZp4h1gXiEQ-unsplash.jpg"), #B2DD9E;
+    background-repeat: no-repeat, repeat;
+    /* background-image: url("img_tree.gif"), url("paper.gif"); */
+    background-blend-mode: lighten;
+    background-blend-mode: screen, normal;
 }
 
 .left-col p {
@@ -166,44 +158,40 @@ nav {
     margin: 5.688rem 1.625rem 6rem 3.75rem;
     position: relative;
 }
+
 .shadow-img {
     position: relative;
     opacity: 0.5;
 }
+
 .main-img {
-    opacity: 1;
     position: absolute;
     z-index: 1;
     left: 4px;
     top: -18px;
 }
 
-.rigth-col{
+.rigth-col {
     background: #7988BE;
 }
 
-.quote {
-    background: url("/assets/stadium.jpg");
+.testimonial {
+    background: url("avi-waxman-xlO5WWQDcQQ-unsplash.jpg"), #303853;
     height: 37.188rem;
-
+    padding: 3.813rem 0 3.813rem 2.563rem;
 }
-.quote p {
+
+.testimonial p {
     font-size: 1.5rem;
     font-family: "Bebas Neue";
 }
-.quote .author {
+
+.testimonial .author {
     margin-top: 2.438rem;
     font-size: 1.125rem;
     font-family: 'Bebas Neue';
 }
-blockquote {
-    background: #303853;
-    height: 100%;
-    width: 100%;
-    padding: 3.813rem 0 3.813rem 2.563rem;
-    margin: 0;
-    opacity: 0.8;
-}
+
 blockquote p {
     line-height: 99.6%;
     color: #FFFFFF;
@@ -215,25 +203,25 @@ blockquote p {
     display: inline-block;
     width: 1.75rem;
     margin-right: 0.688rem;
-    padding-bottom:0.5rem ;
+    padding-bottom: 0.5rem;
 }
-.author {
-    display: inline-flex;
-    align-items: center;
-}
+
 .game-footage {
     height: 100%;
     padding: 53px 0 39px;
 }
+
 .col-content h2 {
     font-size: 36px;
     line-height: 91.6%;
 }
+
 .col-content p {
     line-height: 141.6%;
     font-size: 1.125rem;
     margin-right: 2.188rem;
 }
+
 .col-img-gallery {
     display: grid;
     grid-template-areas:
@@ -246,68 +234,81 @@ blockquote p {
 .img-container {
     width: 7.313rem;
 }
+
 .gallery {
     height: 100%;
     min-width: 7.313rem;
     min-height: 7.313rem;
 }
+
 .img-01 {
     grid-area: img-5;
+
 }
+
 .img-02 {
     grid-area: img-2;
+
 }
+
 .img-03 {
     grid-area: img-4;
 }
+
 .img-04 {
     grid-area: img-1;
 }
+
 .img-05 {
     grid-area: img-3;
 }
 
-/* CONTACT US */
+/* FOOTER */
 
-.contact .container {
+footer .container {
     padding: 0 1.813rem 3.313rem 0;
     background: #B2DD9E;
 }
-.contact h2 {
+
+footer h2 {
     background: #9FC88C;
-    padding: 1.813rem 1.563rem 1.5rem 0 ;
+    padding: 1.813rem 1.563rem 1.5rem 0;
     font-size: 2.25rem;
     margin: 0;
 }
-.contact h2,
-.contact a {
+
+footer h2,
+footer a {
     text-align: center;
 }
-.form-el {
+
+form {
     padding: 1.813rem 2.688rem 0 3.938rem;
 }
+
 .contact-details {
     padding-left: 3.938rem;
 }
+
 .contact-details p {
     margin-top: 0;
     margin-bottom: 0.75rem;
 }
-.contact-details p a {
-    color: inherit;
-}
+
 .border {
     height: 0px;
     width: 172px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 1.063rem;
 }
+
 input,
 label,
 button {
     display: block;
     width: 100%;
 }
+
 button {
     background: #000;
     color: white;
@@ -317,76 +318,80 @@ button {
     letter-spacing: 1px;
     margin: 3.5rem 0;
     font-family: inherit;
-    border: 0;
 }
+
 label {
     font-size: 1.5rem;
     margin-top: 1.875rem;
     margin-bottom: 1.125rem;
 }
-input{
+
+input {
     padding: 1rem;
-    font-size: 1.2rem;
-    border: none;
 }
+
 @media screen and (min-width: 900px) {
     .container {
         min-width: 1440px;
     }
 
     .gallery {
-        max-width:17.563rem;
+        max-width: 17.563rem;
         max-height: 17.563rem;
     }
+
     .hero,
-    .quote {
+    .testimonial {
         margin-left: calc(15rem - 3.75rem);
     }
+
     .hero {
         display: grid;
-        grid-template-columns: 60% 0 auto;
+        grid-template-columns: 60% auto;
     }
-    .left-col-cover {
-        height: 100%;
-        width: 100%;
-    }
-    .flex-warp {
-        position: unset;
-    }
+
     .menu-btn,
     .exit-btn {
         display: none;
     }
+
     nav {
         position: unset;
         height: fit-content;
-        transform: translateX(0);
+        display: block;
         background: red;
     }
+
     header {
         flex-direction: row;
         justify-content: end;
         padding-right: 7rem;
     }
-    .menu-list{
+
+    .menu-list {
         padding: 0;
         background: none;
         height: 0;
     }
+
     .menu-list ul {
         flex-direction: row;
         gap: 2.125rem;
         align-items: center;
         position: unset;
         padding: 0;
-        margin-right: 7rem;
+
     }
+
     .menu-list a {
+        /* color: #363B4E; */
         font-size: 1.5rem;
     }
+
     .logo {
         left: 151px;
     }
+
     .left-col-content {
         position: absolute;
         top: 8rem;
@@ -395,80 +400,93 @@ input{
         text-align: left;
         z-index: 3;
     }
+
     .hero h1 {
         font-size: 6.063rem;
         width: 85%;
         padding-bottom: 0;
     }
+
     .hero p {
         font-size: 1.5rem;
         padding: 2rem;
         line-height: 2.124rem;
     }
+
     .hero-img {
         position: absolute;
         left: 655px;
         top: 200px;
         width: 30.25rem;
-        height:22.625rem;
+        height: 22.625rem;
     }
-    .quote {
+
+    .testimonial {
         display: flex;
         align-items: center;
-    }
-    blockquote {
         padding-left: 10rem;
-
-    }
-    .quote p:first-child{
-        font-size: 3.375rem;
-    }
-    .game-footage {
-        display: flex;
-        padding-bottom: 8.91rem;
         position: relative;
     }
+
+    .testimonial blockquote {
+        width: 100%;
+    }
+
+    .testimonial p:first-child {
+        font-size: 3.375rem;
+    }
+
+    .game-footage {
+        display: flex;
+    }
+
     .col-content h2 {
         font-size: 5.553rem;
     }
+
     .col-content {
         width: 35%;
         padding-left: 4rem;
     }
-        .col-content p {
-            font-size: 1.5rem;
-        }
+
     .col-img-gallery {
         position: absolute;
-            bottom: 170px;
-            right: 0;
-
+        bottom: -35px;
+        right: 0;
     }
-    .contact h2 {
+
+    footer h2 {
         font-size: 4rem;
         width: 50%;
         text-align: start;
         padding-left: 7rem;
     }
-    .form-el {
+
+    .footer-flex form {
         padding-left: 7rem;
     }
-    .form-flex {
+
+    .footer-flex {
         display: grid;
         grid-template-columns: 60% 40%;
     }
-    .form-el {
+
+    form {
         padding-top: 0;
     }
+
     .contact-details {
         padding-top: 5.5rem;
     }
+
     label {
         font-size: 2rem;
     }
+
     input {
         height: 4.563rem;
     }
+
     .contact-details p {
         font-size: 1.375rem;
         margin-bottom: 0.94rem;
@@ -478,6 +496,7 @@ input{
     .border {
         width: 24.688rem;
     }
+
     .border:first-of-type {
         margin-bottom: 0.5rem;
     }
